@@ -72,9 +72,11 @@ a {
 .header .container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--header-border-bottom);
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.header {
+  border-bottom: 1px solid var(--header-border-bottom);
 }
 .navigation {
   display: flex;
@@ -114,29 +116,19 @@ a {
   color: var(--accent-color);
 }
 .contacts-item:not(:last-child) {
-  margin-right: 52 px;
-}
-.mail-header-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
   margin-right: 52px;
 }
-.tel-header-link {
+.header-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-.tel-header-link:hover,
-.tel-header-link:focus {
-  color: var(--accent-color);
-}
-.mail-header-link:hover,
-.mail-header-link:focus {
+.header-link:hover,
+.header-link:focus {
   color: var(--accent-color);
 }
 .contacts {
@@ -183,12 +175,12 @@ a {
 .advantages-list {
   display: flex;
   margin-top: -30px;
-  margin-bottom: -30px;
+  margin-left: -30px;
 }
 .advantages-list-item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc (100% / 4 - 30px);
+  flex-basis: calc(100% / 4 - 30px);
 }
 .advantages-title {
   font-weight: 700;
@@ -204,15 +196,18 @@ a {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+.services {
+  padding-bottom: 94px;
+}
 .services-list {
   display: flex;
   margin-top: -30px;
-  margin-bottom: -30px;
+  margin-left: -30px;
 }
 .services-list-item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc (100% / 3 - 30px);
+  flex-basis: calc(100% / 3 - 30px);
 }
 .services-subtitle {
   font-weight: 700;
@@ -234,7 +229,10 @@ a {
 .team-list-item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc (100% / 4 - 30px);
+  flex-basis: calc(100% / 4 - 30px);
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-subtitle {
   font-weight: 700;
@@ -259,8 +257,7 @@ a {
 }
 .team-list-content-wrapper {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 36px;
+  padding: 30px 55px;
 }
 /* ============================== СТИЛИ FOOTER================================ */
 .footer {
@@ -293,6 +290,7 @@ a {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
+  margin-top: 9px;
 }
 .footer {
   padding-top: 60px;
@@ -303,7 +301,7 @@ a {
 .portfolio-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .portfolio-list-item:not(:last-child) {
   margin-right: 8px;
@@ -335,11 +333,11 @@ a {
 .projects-list-item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc (100% / 3 - 30px);
+  flex-basis: calc(100% / 3 - 30px);
 }
 .projects-list-content-wrapper {
-  padding-top: 20px 24px;
-  border-bottom: 1px solid var(--projects-border-bottom);
+  padding: 20px 24px;
+  border: 1px solid var(--projects-border-bottom);
 }
 .projects-name {
   font-weight: 700;
@@ -347,9 +345,6 @@ a {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
-}
-.projects-list-img {
-  margin-bottom: 20px;
 }
 .projects-description {
   font-size: 16px;
